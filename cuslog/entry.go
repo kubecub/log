@@ -3,6 +3,8 @@
 // Licensed under the MIT License (the "License");
 // you may not use this file except in compliance with the License.
 
+// After calling the log print function, you also need to print these logs to the supported output,
+// so you need to implement the write function, whose write logic is stored in the `entry.go` file.
 package cuslog
 
 import (
@@ -12,6 +14,8 @@ import (
 	"time"
 )
 
+// Type is used to store all log information, that is, log configuration and log content.
+// The writing logic is done around an instance of the Entry type.
 type Entry struct {
 	logger *logger
 	Buffer *bytes.Buffer
@@ -38,6 +42,8 @@ func (e *Entry) write(level Level, format string, args ...interface{}) {
 	e.Format = format
 	e.Args = args
 	if !e.logger.opt.disableCaller {
+		// runtime.Caller() gets the file name and line number.
+		// When calling runtime.Caller(), be careful to pass in the correct stack depth.
 		if pc, file, line, ok := runtime.Caller(2); !ok {
 			e.File = "???"
 			e.Func = "???"

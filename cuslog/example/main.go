@@ -14,7 +14,7 @@ import (
 
 func main() {
 	cuslog.Info("std log")
-	cuslog.SetOptions(cuslog.WithLevel(cuslog.DebugLevel))
+	cuslog.SetOptions(cuslog.WithLevel(cuslog.InfoLevel))
 	cuslog.Debug("change std log to debug level")
 
 	// 输出到文件
@@ -24,9 +24,13 @@ func main() {
 	}
 	defer fd.Close()
 
-	l := cuslog.New(cuslog.WithLevel(cuslog.InfoLevel),
+	l := cuslog.New(
+		cuslog.WithLevel(cuslog.DebugLevel),
 		cuslog.WithOutput(fd),
 		cuslog.WithFormatter(&cuslog.JsonFormatter{IgnoreBasicFields: false}),
+		//cuslog.WithFormatter(&cuslog.TextFormatter{IgnoreBasicFields: false}),
 	)
-	l.Info("custom log with json formatter")
+	l.Debugf("custom log with json formatter: %s", "test")
+	l.Error("custom log with json formatter")
+	l.Info("custom log with json formatter") // Only info will be logged
 }

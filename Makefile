@@ -92,6 +92,11 @@ fmt:
 vet:
 	@$(GO) vet ./...
 
+## generate: Run go generate against code.
+.PHONY: generate
+generate:
+	@$(GO) generate ./...
+
 ## lint: Run go lint against code.
 .PHONY: lint
 lint:
@@ -104,7 +109,6 @@ style: fmt vet lint
 ## test: Run unit test
 .PHONY: test
 test: 
-	@echo "===========> Run unit test"
 	@$(GO) test ./... 
 
 ## cover: Run unit test with coverage.
@@ -123,7 +127,7 @@ copyright-verify:
 .PHONY: copyright-add
 copyright-add: 
 	@echo "===========> Adding $(LICENSE_TEMPLATE) the boilerplate headers for all files"
-	@addlicense -y $(shell date +"%Y") -v -c "KubeCub." -f $(LICENSE_TEMPLATE) $(CODE_DIRS)
+	@addlicense -y $(shell date +"%Y") -v -c "KubeCub & Xinwei Xiong(cubxxw)." -f $(LICENSE_TEMPLATE) $(CODE_DIRS)
 	@echo "===========> End the copyright is added..."
 
 ## go.clean: Clean all builds.

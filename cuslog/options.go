@@ -97,7 +97,10 @@ type options struct {
 	output        io.Writer
 	level         Level
 	stdLevel      Level
+	// formatter is cublog's log formatter.
+	// It also has built-in Formatter for JSON and Text formats
 	formatter     Formatter
+	// whether to enable the file name and line number
 	disableCaller bool
 }
 

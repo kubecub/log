@@ -3,6 +3,8 @@
 // Licensed under the MIT License (the "License");
 // you may not use this file except in compliance with the License.
 
+// After the cuslog package is developed, you can write test code 
+// and call the cuslog package to test whether the functions of the cuslog package are normal.
 package main
 
 import (
@@ -20,7 +22,7 @@ func main() {
 	cuslog.Debug("log in json format")
 	cuslog.Info("another log in json format")
 
-	// 输出到文件
+	// Output to a file
 	fd, err := os.OpenFile("test.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatalln("create file test.log failed")
