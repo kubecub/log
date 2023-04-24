@@ -3,4 +3,4 @@
 // Licensed under the MIT License (the "License");
 // you may not use this file except in compliance with the License.
 
-package distribution // import "github.com/kubecub/log/distribution"
+package main //github.com/kubecub/log

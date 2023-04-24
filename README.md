@@ -33,7 +33,6 @@ You can build the example program by running the following command in the projec
 
 ```
 $ make build
-
 ```
 
 ### Running
@@ -42,7 +41,6 @@ You can run the example program by running the following command in the project 
 
 ```
 $ ./bin/main
-
 ```
 
 ## Usage
@@ -51,7 +49,6 @@ Import the framework as follows:
 
 ```
 import "github.com/kubecub/log"
-
 ```
 
 ### Code Examples
@@ -76,7 +73,6 @@ func main() {
         "size":   10,
     }).Info("A group of walrus emerges from the ocean")
 }
-
 ```
 
 ## Contributing
