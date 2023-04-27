@@ -11,6 +11,13 @@ if [[ ! -d "$BIN_DIR" ]]; then
   mkdir "$BIN_DIR"
 fi
 
-go build -o "$BIN_DIR/binary1" ./cmd/binary1
-go build -o "$BIN_DIR/binary2" ./cmd/binary2
-go build -o "$BIN_DIR/binary3" ./cmd/binary3
+DIR_1="./example/example.go"
+DIR_2="./example/simple/simple.go"
+DIR_3="./example/context/main.go"
+DIR_4="./example/vlevel/v_level.go"
+
+printf "===========> Building binaries for %s"
+go build -o "$BIN_DIR/$DIR_1" $DIR_1
+go build -o "$BIN_DIR/$DIR_2" $DIR_2
+go build -o "$BIN_DIR/$DIR_3" $DIR_3
+go build -o "$BIN_DIR/$DIR_4" $DIR_4

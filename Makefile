@@ -66,7 +66,7 @@ all: tidy add-copyright lint cover build
 build: 
 	@echo "$(shell go version)"
 	@echo "===========> Building binary $(BUILDAPP) *[Git Info]: $(VERSION)-$(GIT_COMMIT)"
-	@export CGO_ENABLED=0 && go build -o $(BUILDAPP) -ldflags '-s -w' $(BUILDFILE)
+	@export CGO_ENABLED=0 && chmod +x ./scripts/build.sh && ./scripts/build.sh
 
 ## build.%: Builds a binary of the specified directory.
 .PHONY: build.%

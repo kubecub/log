@@ -395,7 +395,8 @@ func (l *zapLogger) Debugw(msg string, keysAndValues ...interface{}) {
 	l.zapLogger.Sugar().Debugw(msg, keysAndValues...)
 }
 
-`// Info method output info level log.
+// ---------------------------------------------------
+// Info method output info level log.
 func Info(msg string, fields ...Field) {
 	std.zapLogger.Info(msg, fields...)
 }
@@ -403,7 +404,9 @@ func Info(msg string, fields ...Field) {
 func (l *zapLogger) Info(msg string, fields ...Field) {
 	l.zapLogger.Info(msg, fields...)
 }
-`
+
+// ---------------------------------------------------
+
 // Infof method output info level log.
 func Infof(format string, v ...interface{}) {
 	std.zapLogger.Sugar().Infof(format, v...)

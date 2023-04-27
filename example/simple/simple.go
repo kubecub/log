@@ -5,7 +5,9 @@
 
 package main
 
-import "github.com/kubecub/log"
+import (
+	"github.com/kubecub/log"
+)
 
 func main() {
 	log.Infof("this is a test log, message: %s", "good")
