@@ -77,7 +77,7 @@ func main() {
 
 ## Contributing
 
-Contributions to this project are welcome! Please see CONTRIBUTING.md for details.
+Contributions to this project are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
 ## Community (Optional)
 
