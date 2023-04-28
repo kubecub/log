@@ -1,4 +1,5 @@
-#  Contributing to [log](https://github.com/kubecub/log)
+#  Contributing to log
+
 So, you want to hack on [log](https://github.com/kubecub/log)? Yay!
 
 First of all, thank you for considering contributing to our project! We appreciate your time and effort, and we value any contribution, whether it's reporting a bug, suggesting a new feature, or submitting a pull request.
@@ -24,7 +25,7 @@ We divide the problem into security and general problems:
 
 Security issues are always treated seriously. As our usual principle, we discourage anyone to spread security issues. If you find a security issue of [log](https://github.com/kubecub/log), please do not discuss it in public and even do not open a public issue.
 
-Instead we encourage you to send us a private email to [winxu81@gmail.com](mailto:winxu81@gmail.com) to report this.
+Instead we encourage you to send us a private email to [3293172751nss@gmail.com](mailto:3293172751nss@gmail.com) to report this.
 
 
 #### Reporting general issues
@@ -195,7 +196,7 @@ To propose PR for the [log](https://github.com/kubecub/log) item, we assume you 
 
 Actually in sealos, we take two rules serious when committing:
 
-**🥇 Commit Message: **
+**🥇 Commit Message:**
 
 Commit message could help reviewers better understand what the purpose of submitted PR is. It could help accelerate the code review procedure as well. We encourage contributors to use **EXPLICIT** commit message rather than ambiguous message. In general, we advocate the following commit message type:
 
@@ -217,7 +218,7 @@ On the other side, we discourage contributors from committing message like the f
 + ~~add doc~~
 
 
-**🥈 Commit Content**
+**🥈 Commit Content:**
 
 Commit content represents all content changes included in one commit. We had better include things in one single commit which could support reviewer's complete review without any other commits' help.
 
@@ -337,7 +338,7 @@ Releases of [log](https://github.com/kubecub/log) are done using [Release Please
 With the next relevant merge, a new release PR will be created and the process starts again
 
 
-**Manually setting the version **
+**Manually setting the version:**
 
 If you want to manually set the version, you can create a PR with an empty commit message that contains the version number in the commit message. For example:
 
