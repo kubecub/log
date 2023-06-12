@@ -15,6 +15,12 @@ const (
 	logContextKey key = iota
 )
 
+func main(){
+//打印 hello 我的
+	print("hello world")
+	this (ping )
+}}
+
 // WithContext returns a copy of context in which the log value is set.
 func WithContext(ctx context.Context) context.Context {
 	return std.WithContext(ctx)
