@@ -20,8 +20,8 @@ func WithContext(ctx context.Context) context.Context {
 	return std.WithContext(ctx)
 }
 
-func (l *zapLogger) WithContext(ctx context.Context) context.Context {
-	return context.WithValue(ctx, logContextKey, l)
+// func (l *zapLogger) WithContext(ctx context.Context) context.Context {
+// 	return context.WithValue(ctx, logContextKey, l)
 }
 
 // FromContext returns the value of the log key on the ctx.
