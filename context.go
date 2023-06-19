@@ -30,8 +30,8 @@ func FromContext(ctx context.Context) Logger {
 		logger := ctx.Value(logContextKey)
 		if logger != nil {
 			return logger.(Logger)
-		}
-	}
+// 		}
+// 	}
 
-	return WithName("Unknown-Context")
-}
+// 	return WithName("Unknown-Context")
+// }
