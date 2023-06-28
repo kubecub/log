@@ -1,0 +1,42 @@
+name: Assignees
+
+on:
+  issue_comment:
+    types:
+      - created
+
+jobs:
+  assignees:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if issue comment matches criteria
+        id: check_comment
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          script: |
+            const comment = context.payload.comment.body.toLowerCase();
+            const hasGoodFirstIssueLabel = context.payload.issue.labels.some(label => label.name.toLowerCase() === 'good first issue');
+            const isAcceptCommand = comment.includes('/accept');
+            return {
+              hasGoodFirstIssueLabel,
+              isAcceptCommand
+            }
+
+      - name: Assign issue to commenter
+        if: steps.check_comment.outputs.hasGoodFirstIssueLabel && steps.check_comment.outputs.isAcceptCommand
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          script: |
+            const issueNumber = context.payload.issue.number;
+            const commenter = context.payload.comment.user.login;
+            const assignees = [commenter];
+            const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
+            await octokit.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              assignees: assignees
+            });
