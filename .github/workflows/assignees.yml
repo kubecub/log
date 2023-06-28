@@ -1,4 +1,4 @@
-name: Assignees
+name: Auto Assignee
 
 on:
   issue_comment:
@@ -6,37 +6,38 @@ on:
       - created
 
 jobs:
-  assignees:
+  assignee:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check if issue comment matches criteria
-        id: check_comment
-        uses: actions/github-script@v5
-        with:
-          github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
-          script: |
-            const comment = context.payload.comment.body.toLowerCase();
-            const hasGoodFirstIssueLabel = context.payload.issue.labels.some(label => label.name.toLowerCase() === 'good first issue');
-            const isAcceptCommand = comment.includes('/accept');
-            return {
-              hasGoodFirstIssueLabel,
-              isAcceptCommand
-            }
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Assign issue to commenter
-        if: steps.check_comment.outputs.hasGoodFirstIssueLabel && steps.check_comment.outputs.isAcceptCommand
-        uses: actions/github-script@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
-          script: |
-            const issueNumber = context.payload.issue.number;
-            const commenter = context.payload.comment.user.login;
-            const assignees = [commenter];
-            const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
-            await octokit.issues.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issueNumber,
-              assignees: assignees
-            });
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Assignee
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+        run: |
+          # Extract the comment body
+          COMMENT_BODY=$(jq -r ".comment.body" "$GITHUB_EVENT_PATH")
+
+          # Check if the comment contains "/accept"
+          if [[ "$COMMENT_BODY" == *"/accept"* ]]; then
+            # Extract the commenter's username
+            COMMENTER=$(jq -r ".comment.user.login" "$GITHUB_EVENT_PATH")
+
+            # Assign the commenter as the assignee
+            echo "Assigning $COMMENTER as the assignee"
+            curl -X POST \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$GITHUB_ISSUE_NUMBER/assignees" \
+              -d "{\"assignees\":[\"$COMMENTER\"]}"
+          fi
