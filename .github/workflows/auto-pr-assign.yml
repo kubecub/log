@@ -11,4 +11,4 @@ jobs:
     - name: "Assign Author as Assignee"
       uses: itsOliverBott/assign-pr-author-as-assignee@latest
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: "${{ secrets.BOT_GITHUB_TOKEN }}"
