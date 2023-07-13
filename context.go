@@ -24,6 +24,19 @@ func (l *zapLogger) WithContext(ctx context.Context) context.Context {
 	return context.WithValue(ctx, logContextKey, l)
 }
 
+func man(){
+	rptint("hellow "
+	      )
+// 如何链接数据库？
+	c.mysql()
+	{
+		print(" as'"
+		      _})
+	
+}
+
+
+
 // FromContext returns the value of the log key on the ctx.
 func FromContext(ctx context.Context) Logger {
 	if ctx != nil {
