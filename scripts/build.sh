@@ -5,19 +5,12 @@
 # you may not use this file except in compliance with the License.
 
 
-BIN_DIR="/bin"
+set -euo pipefail
 
-if [[ ! -d "$BIN_DIR" ]]; then
-  mkdir "$BIN_DIR"
-fi
+BIN_DIR="${OUTPUT_DIR:-./bin}"
+mkdir -p "$BIN_DIR"
 
-DIR_1="./example/example.go"
-DIR_2="./example/simple/simple.go"
-DIR_3="./example/context/main.go"
-DIR_4="./example/vlevel/v_level.go"
-
-printf "===========> Building binaries for %s"
-go build -o "$BIN_DIR/$DIR_1" $DIR_1
-go build -o "$BIN_DIR/$DIR_2" $DIR_2
-go build -o "$BIN_DIR/$DIR_3" $DIR_3
-go build -o "$BIN_DIR/$DIR_4" $DIR_4
+go build -mod=readonly -o "$BIN_DIR/example" ./example/example.go
+go build -mod=readonly -o "$BIN_DIR/simple" ./example/simple/simple.go
+go build -mod=readonly -o "$BIN_DIR/context" ./example/context/main.go
+go build -mod=readonly -o "$BIN_DIR/vlevel" ./example/vlevel/v_level.go
