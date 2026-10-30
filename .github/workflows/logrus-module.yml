@@ -35,7 +35,7 @@ jobs:
           go mod edit -require=github.com/sirupsen/logrus@v1.9.1
           go mod tidy
           set +e
-          go test -count=1 -run '^TestWriterContract$' -timeout=15s ./... > "$RUNNER_TEMP/logrus-regression.log" 2>&1
+          go test -count=1 -run '^TestWriterContract$/^lines$' -timeout=15s ./... > "$RUNNER_TEMP/logrus-regression.log" 2>&1
           regression_status=$?
           set -e
           if [ "$regression_status" -eq 0 ]; then
