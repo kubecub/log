@@ -32,7 +32,7 @@ The [Makefile](./Makefile) is for every developer, even if you don't know how to
 
 #### Code and doc contribution
 
-Every action to make project log better is encouraged. On GitHub, every improvement for log could be via a [PR](https://github.com/log/pulls) (short for pull request).
+Every action to make project log better is encouraged. On GitHub, every improvement for log could be via a [PR](https://github.com/kubecub/log/pulls) (short for pull request).
 
 + If you find a typo, try to fix it!
 + If you find a bug, try to fix it!
@@ -48,7 +48,7 @@ Every action to make project log better is encouraged. On GitHub, every improvem
 #### Where should I start?
 
 + If you are new to the project, don't know how to contribute log, please check out the [good first issue](https://github.com/kubecub/log/issues?q=is%3Aopen+label%3A"good+first+issue"+sort%3Aupdated-desc) label.
-+ You should be good at filtering the log issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/log/issues?q=is%3Aissue+label%3Afeature) proposals, and [bug](https://github.com/{github/issues?q=is%3Aissue+label%3Abug+) fixes.
++ You should be good at filtering the log issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/log/issues?q=is%3Aissue+label%3Afeature) proposals, and [bug](https://github.com/kubecub/log/issues?q=is%3Aissue+label%3Abug) fixes.
 + If you are looking for something to work on, check out our [open issues](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 + If you have an idea for a new feature, please [open an issue](https://github.com/kubecub/log/issues/new/choose), and we can discuss it.
 
@@ -175,7 +175,7 @@ To be honest, we regard every user of logas a very kind contributor. After exper
 
 Since we collaborate project log in a distributed way, we appreciate **WELL-WRITTEN**, **DETAILED**, **EXPLICIT** issue reports. To make the communication more efficient, we wish everyone could search if your issue is an existing one in the searching list. If you find it existing, please add your details in comments under the existing issue instead of opening a brand new one.
 
-To make the issue details as standard as possible, we setup an [ISSUE TEMPLATE](https://github.com/kubecub/log/tree/main/.github/ISSUE_TEMPLATE) for issue reporters. You can find three kinds of issue templates there: question, bug report and feature request. Please **BE SURE** to follow the instructions to fill fields in template.
+Use the existing [Issues](https://github.com/kubecub/log/issues) for questions, bug reports, and feature requests. Include the relevant context, expected and actual behavior, and reproduction steps when reporting a problem.
 
 **There are a lot of cases when you could open an issue:**
 
@@ -237,7 +237,7 @@ An example for this could be:
 
 #### PR Description
 
-PR is the only way to make change to log project files. To help reviewers better get your purpose, PR description could not be too detailed. We encourage contributors to follow the [PR template](https://github.com/kubecub/log/tree/main/.github/PULL_REQUEST_TEMPLATE.md) to finish the pull request.
+Use a [pull request](https://github.com/kubecub/log/pulls) to propose changes to project files. Explain the problem, the resulting behavior, and how you validated the change so reviewers can assess its purpose.
 
 You can find some very formal PR in [RFC](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) issues and learn about them.
 
@@ -290,7 +290,6 @@ The documentation for log includes:
 
 + [README.md](https://github.com/kubecub/log/blob/main/README.md): This file includes the basic information and instructions for getting started with log.
 + [CONTRIBUTING.md](https://github.com/kubecub/log/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to log's codebase, such as how to submit issues, pull requests, and code reviews.
-+ [DEVELOPGUIDE.md](https://github.com/kubecub/log/blob/main/DEVELOPGUIDE.md): This file provides a more in-depth guide to developing log, including information on the project's architecture, coding conventions, and testing practices.
 + [Official Documentation](https://nsddd.top): This is the official documentation for log, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 
 Please obey the following rules to better format the docs, which would greatly improve the reading experience.
@@ -310,7 +309,7 @@ We choose GitHub as the primary place for log to collaborate. So the latest upda
 + help solve other user's problems;
 + help review other's [PR](https://github.com/kubecub/log/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc) design; 
 + discuss about log to make things clearer;
-+ advocate [log](google.com/search?q=log) technology beyond GitHub;
++ advocate [log](https://github.com/kubecub/log) technology beyond GitHub;
 + write blogs on log and so on.
 
 In a word, **ANY HELP IS CONTRIBUTION.**
