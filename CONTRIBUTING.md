@@ -32,7 +32,7 @@ The [Makefile](./Makefile) is for every developer, even if you don't know how to
 
 #### Code and doc contribution
 
-Every action to make project log better is encouraged. On GitHub, every improvement for log could be via a [PR](https://github.com/log/pulls) (short for pull request).
+Every action to make project log better is encouraged. On GitHub, every improvement for log could be via a [PR](https://github.com/kubecub/log/pulls) (short for pull request).
 
 + If you find a typo, try to fix it!
 + If you find a bug, try to fix it!
@@ -48,7 +48,7 @@ Every action to make project log better is encouraged. On GitHub, every improvem
 #### Where should I start?
 
 + If you are new to the project, don't know how to contribute log, please check out the [good first issue](https://github.com/kubecub/log/issues?q=is%3Aopen+label%3A"good+first+issue"+sort%3Aupdated-desc) label.
-+ You should be good at filtering the log issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/log/issues?q=is%3Aissue+label%3Afeature) proposals, and [bug](https://github.com/{github/issues?q=is%3Aissue+label%3Abug+) fixes.
++ You should be good at filtering the log issue tags and finding the ones you like, such as [RFC](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) for big initiatives, features for [feature](https://github.com/kubecub/log/issues?q=is%3Aissue+label%3Afeature) proposals, and [bug](https://github.com/kubecub/log/issues?q=is%3Aissue+label%3Abug) fixes.
 + If you are looking for something to work on, check out our [open issues](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 + If you have an idea for a new feature, please [open an issue](https://github.com/kubecub/log/issues/new/choose), and we can discuss it.
 
@@ -58,7 +58,7 @@ For any substantial design, there should be a well-crafted design document. This
 
 Anybody can access the shared Drive for reading. To get access to comment. Once you've done that, head to the [shared Drive](https://drive.google.com/) and behold all the docs.
 
-In addition to that, we'd love to invite you to [join our Slack](https://join.slack.com/t/c-ub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) where you can play with your imagination, tell us what you're working on, and get a quick response.
+For questions and project discussions, use [GitHub Discussions](https://github.com/kubecub/log/discussions).
 
 When documenting a new design, we recommend a 2-step approach:
 
@@ -67,7 +67,7 @@ When documenting a new design, we recommend a 2-step approach:
 
 In order to contribute a feature to log you'll need to go through the following steps:
 
-+ Discuss your idea with the appropriate [working groups](https://join.slack.com/t/c-ub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) on the working group's Slack channel.
++ Discuss your idea in [GitHub Discussions](https://github.com/kubecub/log/discussions) before starting work.
 + Once there is general agreement that the feature is useful, create a GitHub issue to track the discussion. The issue should include information about the requirements and use cases that it is trying to address.
 + Include a discussion of the proposed design and technical details of the implementation in the issue.
 
@@ -175,7 +175,7 @@ To be honest, we regard every user of logas a very kind contributor. After exper
 
 Since we collaborate project log in a distributed way, we appreciate **WELL-WRITTEN**, **DETAILED**, **EXPLICIT** issue reports. To make the communication more efficient, we wish everyone could search if your issue is an existing one in the searching list. If you find it existing, please add your details in comments under the existing issue instead of opening a brand new one.
 
-To make the issue details as standard as possible, we setup an [ISSUE TEMPLATE](https://github.com/kubecub/log/tree/main/.github/ISSUE_TEMPLATE) for issue reporters. You can find three kinds of issue templates there: question, bug report and feature request. Please **BE SURE** to follow the instructions to fill fields in template.
+Use the existing [Issues](https://github.com/kubecub/log/issues) for questions, bug reports, and feature requests. Include the relevant context, expected and actual behavior, and reproduction steps when reporting a problem.
 
 **There are a lot of cases when you could open an issue:**
 
@@ -237,7 +237,7 @@ An example for this could be:
 
 #### PR Description
 
-PR is the only way to make change to log project files. To help reviewers better get your purpose, PR description could not be too detailed. We encourage contributors to follow the [PR template](https://github.com/kubecub/log/tree/main/.github/PULL_REQUEST_TEMPLATE.md) to finish the pull request.
+Use a [pull request](https://github.com/kubecub/log/pulls) to propose changes to project files. Explain the problem, the resulting behavior, and how you validated the change so reviewers can assess its purpose.
 
 You can find some very formal PR in [RFC](https://github.com/kubecub/log/issues?q=is%3Aissue+is%3Aopen+RFC+label%3ARFC) issues and learn about them.
 
@@ -290,12 +290,11 @@ The documentation for log includes:
 
 + [README.md](https://github.com/kubecub/log/blob/main/README.md): This file includes the basic information and instructions for getting started with log.
 + [CONTRIBUTING.md](https://github.com/kubecub/log/blob/main/CONTRIBUTING.md): This file contains guidelines for contributing to log's codebase, such as how to submit issues, pull requests, and code reviews.
-+ [DEVELOPGUIDE.md](https://github.com/kubecub/log/blob/main/DEVELOPGUIDE.md): This file provides a more in-depth guide to developing log, including information on the project's architecture, coding conventions, and testing practices.
-+ [Official Documentation](nsddd.top): This is the official documentation for log, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
++ [Official Documentation](https://nsddd.top): This is the official documentation for log, which includes comprehensive information on all of its features, configuration options, and troubleshooting tips.
 
 Please obey the following rules to better format the docs, which would greatly improve the reading experience.
 
-1. Please do not use Chinese punctuations in English docs, and vice versa.
+1. Please do not use Chinese punctuation in English docs, and vice versa.
 2. Please use upper case letters where applicable, like the first letter of sentences / headings, etc.
 3. Please specify a language for each Markdown code blocks, unless there's no associated languages.
 4. Please insert a whitespace between Chinese and English words.
@@ -310,7 +309,7 @@ We choose GitHub as the primary place for log to collaborate. So the latest upda
 + help solve other user's problems;
 + help review other's [PR](https://github.com/kubecub/log/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc) design; 
 + discuss about log to make things clearer;
-+ advocate [log](google.com/search?q=log) technology beyond GitHub;
++ advocate [log](https://github.com/kubecub/log) technology beyond GitHub;
 + write blogs on log and so on.
 
 In a word, **ANY HELP IS CONTRIBUTION.**
@@ -346,14 +345,13 @@ Such a commit can get produced as follows:
 
 We value close connections with our users, developers, and contributors here at kubecub. With a large community and maintainer team, we're always here to help and support you. Whether you're looking to join our community or have any questions or suggestions, we welcome you to get in touch with us.
 
-Our most recommended way to get in touch is through [Slack](https://join.slack.com/t/c-ub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ). Even if you're in China, Slack is usually not blocked by firewalls, making it an easy way to connect with us. Our Slack community is the ideal place to discuss and share ideas and suggestions with other users and developers of kubecub. You can ask technical questions, seek help, or share your experiences with other users of kubecub.
+Use [GitHub Discussions](https://github.com/kubecub/log/discussions) to ask technical questions, discuss suggestions, or share your experience with this project.
 
-In addition to Slack, we also offer the following ways to get in touch:
+Other existing contact channels:
 
-+ <a href="https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ" target="_blank"><img src="https://img.shields.io/badge/Slack-automation%2B-blueviolet?logo=slack&amp;logoColor=white"></a> We also have Slack channels for you to communicate and discuss. To join, visit https://slack.com/ and join our [👀 kubecub slack](https://join.slack.com/t/kubecub/shared_invite/zt-1se0k2bae-lkYzz0_T~BYh3rjkvlcUqQ) team channel.
++ Project questions and suggestions: [GitHub Discussions](https://github.com/kubecub/log/discussions).
 + <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=3293172751nss@gmail.com" target="_blank"><img src="https://img.shields.io/badge/gmail-%40kubecub-blue?style=social&kubecubo=gmail&logo=gmail"></a> Get in touch with us on [📨Gmail: 3293172751nss@gmail.com](mailto:3293172751nss@gmail.com).  If you have any questions or issues that need resolving, or any suggestions and feedback for our open source projects, please feel free to contact us via email.
-+ <a href="nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a> Read our [🤖kubecub](nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
++ <a href="https://nsddd.top" target="_blank"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-%40kubecub-blue?style=social&logo=Octopus%20Deploy&logoColor=red"></a> Read our [🤖kubecub](https://nsddd.top). Our kubecub is a great place to stay up-to-date with kubecub projects and trends. On the kubecub, we share our latest developments, tech trends, and other interesting information.
 + <a href="https://twitter.com/xxw3293172751" target="_blank"><img src="https://img.shields.io/badge/twitter-%40kubecub-informational?kubecubo=twitter&style=flat-square&logo=twitter"></a> Add [🕊️Twitter](https://twitter.com/xxw3293172751) . If you prefer social media, our Twitter account is a great way to stay up-to-date with kubecub project news and trends. On Twitter, we share our latest tech and trends, as well as relevant news and events.
-+ <a href="http://sm.nsddd.top/sm0d220ad72063197b9875379403f6c88.jpg" target="_blank"><img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square?logo=wechat"></a> Add [📲Wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-smile-brightgreen?kubecubo=wechat&style=flat-square) and indicate that you are a user or developer of kubecub. We will process your request as soon as possible.
 
 Whether you're looking to join our community or have any questions or suggestions, we welcome you to get in touch with us.

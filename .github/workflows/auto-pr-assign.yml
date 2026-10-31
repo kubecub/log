@@ -6,9 +6,18 @@ on:
      
 jobs:
   assign-pr-author-as-assignee:
+    # The existing action assigns the event actor; require that actor to be the human author.
+    if: >-
+      github.event.pull_request.user.type == 'User' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.actor == github.event.pull_request.user.login &&
+      !github.event.pull_request.assignee
+    permissions:
+      contents: read
+      issues: write
     runs-on: ubuntu-latest
     steps:
     - name: "Assign Author as Assignee"
-      uses: itsOliverBott/assign-pr-author-as-assignee@latest
+      uses: itsOliverBott/assign-pr-author-as-assignee@4862ea3abefdc3e7663b1245b5049eef4489bc8c # Assign PR Author as Assignee
       with:
-        token: "${{ secrets.BOT_GITHUB_TOKEN }}"
+        token: "${{ github.token }}"

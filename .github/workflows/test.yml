@@ -4,22 +4,31 @@
 # you may not use this file except in compliance with the License.
 
 name: Test Makefile build
-
-on: [push]
-
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: go-build-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y make
-      
-      - name: Build project
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version: '1.26.10'
+          cache: false
+      - name: Build the actual four examples using the project Makefile
         run: make build
-      
-      - name: Test build artifacts
+      - name: Check each actual build artifact
         run: |
-          # Add your tests here to check the build artifacts
+          test -x bin/example
+          test -x bin/simple
+          test -x bin/context
+          test -x bin/vlevel
