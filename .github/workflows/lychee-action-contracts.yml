@@ -55,7 +55,7 @@ jobs:
           failIfEmpty: true
           output: ${{ steps.fixture.outputs.dir }}/report.md
           token: ${{ github.token }}
-      - name: Exercise the production report condition without creating an issue
+      - name: Exercise the failure report-file condition without creating an issue
         id: report_probe
         if: >-
           always() && !cancelled() &&
